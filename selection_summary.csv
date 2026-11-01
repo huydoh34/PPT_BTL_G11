@@ -1,0 +1,3 @@
+﻿segment,camera_id,recording_id,view_note,observations,start,end,duration_min,median_step_min,gap_limit_min,gap_count,label_status,source,result_status
+A,camnutgiaocaygo3,camnutgiaocaygo3_2026-07-13_R01,Chưa có thông tin view_id,100,2026-07-13T06:08:41+07:00,2026-07-13T07:17:09+07:00,68.46666666666667,0.6166666666666667,1.85,0,unreviewed_prelabel,shared/analysis_snapshot.csv,PRELIMINARY_NOT_GROUND_TRUTH
+B,camnutgiaocaygo3,camnutgiaocaygo3_2026-07-16_R01,Chưa có thông tin view_id,100,2026-07-16T00:00:22+07:00,2026-07-16T00:48:55+07:00,48.55,0.4166666666666667,1.25,0,unreviewed_prelabel,shared/analysis_snapshot.csv,PRELIMINARY_NOT_GROUND_TRUTH
