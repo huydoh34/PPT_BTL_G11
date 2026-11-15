@@ -1,19 +1,18 @@
 # Tuần 3 - Đề tài 11: Tính chỉ số tải tích lũy và khảo sát độ nhạy
 
-Thư mục lưu trữ mã nguồn, dữ liệu kết quả và biểu đồ trực quan hóa cho giai đoạn chạy thử nghiệm trên hai đoạn dữ liệu thực tế A, B và khảo sát độ nhạy lấy mẫu (Bước 4 và Bước 5 của đề tài).
+Thư mục lưu trữ mã nguồn, dữ liệu kết quả và biểu đồ trực quan hóa cho giai đoạn chạy thử nghiệm trên hai đoạn dữ liệu thực tế A, B và khảo sát độ nhạy lấy mẫu.
 
 ## 1. Danh sách tệp trong thư mục
 
 ```text
 Tuan3/
-├── nhom11_tuan3.py                   # Mã nguồn chính tính tích phân hình thang (float64) và khảo sát độ nhạy
+├── nhom11_tuan3.py                   # Mã nguồn chính tính tích phân hình thang và khảo sát độ nhạy
 ├── bang_tich_phan_tuan3_AB.csv       # Bảng tổng hợp chỉ số tải I, thời gian phủ và số xe trung bình qua các kịch bản
 ├── chi_so_tich_luy_session_A.csv     # Chuỗi giá trị tích lũy I_k theo thời gian của đoạn A
 ├── chi_so_tich_luy_session_B.csv     # Chuỗi giá trị tích lũy I_k theo thời gian của đoạn B
 ├── do_thi_dien_tich_session_A.png    # Đồ thị diện tích và đường tích lũy đoạn A
 ├── do_thi_dien_tich_session_B.png    # Đồ thị diện tích và đường tích lũy đoạn B
 ├── do_thi_khao_sat_do_nhay_AB.png    # Biểu đồ so sánh chỉ số tải I giữa các kịch bản khảo sát
-└── README.md                         # Tài liệu mô tả thư mục
 ```
 
 ## 2. Yêu cầu kỹ thuật và quy trình xử lý
