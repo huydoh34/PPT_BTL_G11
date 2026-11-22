@@ -1,0 +1,12 @@
+# Cache & environment
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.DS_Store
+.AppleDouble
+Thumbs.db
+
+# Bản gốc snapshot của lớp: không vô tình commit công khai
+analysis_snapshot*.csv

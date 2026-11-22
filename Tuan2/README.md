@@ -2,7 +2,7 @@
 
 ### 1. Cài đặt thuật toán chính
 
-**File:** `nhom11_hinh_thang_chay_thu.py`
+**File nguồn mã hình thang chạy thử:** [`Tuan1/nhom11_hinh_thang_chay_thu.py`](../Tuan1/nhom11_hinh_thang_chay_thu.py)
 
 - Tự cài đặt phương pháp hình thang ghép cho dữ liệu có bước thời gian không đều.
 - Sử dụng `timestamp` và `total_count` từ dữ liệu phân tích.
@@ -14,9 +14,9 @@ Kết quả chạy thử trên hai đoạn A/B sử dụng nhãn PRELABEL, chưa
 
 ### 2. Kiểm chứng thuật toán
 
-**Script:** `src/kiem_chung.py`
+**Script:** `Tuan2/src/nhom11_kiem_chung.py`
 
-**Kết quả:** `results/nhom11_kiem_chung.csv`
+**Kết quả:** [`Tuan2/results/nhom11_kiem_chung.csv`](results/nhom11_kiem_chung.csv)
 
 Kiểm chứng bằng hàm:
 
@@ -37,11 +37,11 @@ Kết quả gồm tích phân xấp xỉ, sai số tuyệt đối, bậc hội t
 Tại thư mục gốc của repository:
 
 ```bash
-pip install numpy
-python src/kiem_chung.py
+python3 -m pip install numpy
+python3 Tuan2/src/nhom11_kiem_chung.py
 ```
 
-Kết quả được xuất vào `results/nhom11_kiem_chung.csv`.
+Kết quả được xuất vào `Tuan2/results/nhom11_kiem_chung.csv` và `Tuan2/results/nhom11_tong_ket_sai_so.csv`. Đường dẫn đầu ra trong code đã được chuẩn hóa về `Tuan2/results/` để phù hợp cấu trúc GitHub; file tổng kết gốc `Tuan2/nhom11_tong_ket_sai_so.csv` vẫn được giữ nguyên.
 
 ### 4. Trạng thái
 

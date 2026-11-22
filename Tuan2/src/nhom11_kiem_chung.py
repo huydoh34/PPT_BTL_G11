@@ -49,8 +49,8 @@ def ghi_csv(path, rows, columns):
 
 
 def main():
-    # Kết quả luôn nằm trong thư mục results cạnh file .py.
-    output = Path(__file__).resolve().parent / "results"
+    # Đặt đầu ra tại Tuan2/results để khớp cấu trúc repository và README.
+    output = Path(__file__).resolve().parents[1] / "results"
     output.mkdir(parents=True, exist_ok=True)
     exact = np.float64(4.0) / np.float64(3.0)
     records = []

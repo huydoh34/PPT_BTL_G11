@@ -1,0 +1,11 @@
+﻿session,scenario,max_abs_diff,reproduced,note
+A,full,0.0,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth
+A,every_2,0.0,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth
+A,every_4,0.0,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth
+A,drop_10pct,4.547473508864641e-13,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth
+A,drop_20pct,4.547473508864641e-13,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth
+B,full,0.0,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth
+B,every_2,0.0,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth
+B,every_4,0.0,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth
+B,drop_10pct,7.105427357601002e-15,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth
+B,drop_20pct,2.842170943040401e-14,True,Đối chiếu Tuan3 PRELABEL; không phải gold truth

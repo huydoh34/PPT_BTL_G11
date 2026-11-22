@@ -29,27 +29,35 @@ Tuan3/
 
 Đơn vị tính: thời gian tính bằng **phút**, chỉ số tải tích lũy $I$ tính bằng **xe·phút**, và mật độ trung bình theo thời gian $\bar{y}_t$ tính bằng **xe** (số xe trung bình).
 
-| Session | Kịch bản | Số mốc | Ngưỡng gap (phút) | Chỉ số $I$ (xe·phút) | Thời gian phủ (phút) | Số xe trung bình $\bar{y}_t$ (xe) |
-| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| **A** | 1. Gốc (Full) | 99 | 1.85 | 1418.58 | 67.85 | 20.91 |
-| **A** | 2. Giữ mỗi 2 mốc | 50 | 1.85 | 1497.76 | 67.85 | 22.07 |
-| **A** | 2. Giữ mỗi 4 mốc | 26 | 1.85 | 1718.85 | 67.85 | 25.33 |
+| Session | Kịch bản | Số mốc | Ngưỡng gap **thực tế** (phút) | I (xe·phút) | Thời gian phủ (phút) | Số xe TB (xe) |
+|---|---|---:|---:|---:|---:|---:|
+| **A** | 1. Gốc (Full) | 99 | 1.85 | 1418.57 | 67.85 | 20.91 |
+| **A** | 2. Giữ mỗi 2 mốc | 50 | 3.70 | 1497.76 | 67.85 | 22.07 |
+| **A** | 2. Giữ mỗi 4 mốc | 26 | 7.35 | 1718.85 | 67.85 | 25.33 |
 | **A** | 3. Mất 10% mốc nội bộ | 89 | 1.85 | 1296.54 | 63.55 | 20.40 |
 | **A** | 3. Mất 20% mốc nội bộ | 80 | 1.85 | 1320.98 | 63.57 | 20.78 |
 | **B** | 1. Gốc (Full) | 99 | 1.25 | 243.89 | 48.13 | 5.07 |
-| **B** | 2. Giữ mỗi 2 mốc | 50 | 1.25 | 258.00 | 48.13 | 5.36 |
-| **B** | 2. Giữ mỗi 4 mốc | 26 | 1.25 | 252.44 | 48.13 | 5.24 |
+| **B** | 2. Giữ mỗi 2 mốc | 50 | 2.50 | 258.00 | 48.13 | 5.36 |
+| **B** | 2. Giữ mỗi 4 mốc | 26 | 5.55 | 252.44 | 48.13 | 5.24 |
 | **B** | 3. Mất 10% mốc nội bộ | 89 | 1.25 | 226.24 | 45.23 | 5.00 |
 | **B** | 3. Mất 20% mốc nội bộ | 80 | 1.25 | 204.83 | 41.93 | 4.88 |
 
+**Đính chính cách trình bày ngưỡng:** Bảng `bang_tich_phan_tuan3_AB.csv` lưu ngưỡng gap của **lưới gốc** trong mọi hàng, nhưng code Tuần 3 tính lại ngưỡng `3 × median(h)` sau lấy mẫu. Cột trong bảng README trên được đối chiếu với `Tuan4/results/bang_tong_hop_AB.csv`, phản ánh ngưỡng được dùng ở **từng kịch bản**. Không sửa số liệu gốc hay code Tuần 3.
+
 **Nhận xét chính:**
-* Khi làm thưa lưới đều (giữ mỗi 2 hoặc 4 mốc), tổng thời gian bao phủ không đổi nhưng sai số xấp xỉ hình thang tăng lên do bỏ qua các biến động cục bộ của lưu lượng xe.
+* Khi làm thưa lưới đều (giữ mỗi 2 hoặc 4 mốc), tổng thời gian bao phủ không đổi nhưng giá trị tích phân có chênh lệch so với lưới đầy đủ vì một số biến động cục bộ không còn được giữ lại. Đây là **độ nhạy lấy mẫu**, không phải sai số so với tích phân thật.
 * Khi mất ngẫu nhiên 10%–20% mốc nội bộ, một số khoảng cách vượt ngưỡng gap làm ngắt đoạn và giảm tổng thời gian phủ thực tế; tuy nhiên chỉ số số xe trung bình $\bar{y}_t$ vẫn duy trì tính ổn định cao quanh mức ~20.4–20.9 xe (đoạn A) và ~4.9–5.1 xe (đoạn B).
 
 ## 4. Hướng dẫn chạy lại mã nguồn
 
-Đặt tệp dữ liệu chung `analysis_snapshot.csv` (hoặc `shared/analysis_snapshot.csv`) cùng hai tệp ranh giới `segment_A_30s.csv`, `segment_B_30s.csv` ở thư mục làm việc hiện tại, sau đó chạy lệnh:
+Script **gốc** của Tuần 3 cần tệp `analysis_snapshot.csv` (hoặc `shared/analysis_snapshot.csv`), `segment_A_30s.csv`, `segment_B_30s.csv` đặt theo đường dẫn tương đối từ thư mục làm việc và cần `numpy`, `pandas`, `matplotlib`. Lệnh chạy gốc bên dưới yêu cầu cd vào `Tuan3` và tự sao chép các tệp cần thiết; nếu không muốn dùng đường dẫn ngoài repository, hãy dùng pipeline Tuần 47 tại `Tuan4/run_tuan47.py` (đọc lại trực tiếp chuỗi A/B đã được lưu ở Tuần 3).
 
 ```bash
-python nhom11_tuan3.py
+python3 nhom11_tuan3.py
 ```
+
+## 5. Kiểm chứng lại với snapshot nguồn ở Tuần 47
+
+Tuần 47 đã dùng trực tiếp file `analysis_snapshot(1).csv` (200 ảnh; 100 A, 100 B) để đối chiếu dữ liệu Tuần 3. Hai mốc cuối nằm sau ranh giới của lưới 30 giây Tuần 1 nên mỗi đoạn sử dụng 99 điểm. Cả 10 kịch bản tái tạo đúng kết quả hiện có; `image_id` nguồn được bảo toàn ở đầu ra Tuần 4.
+
+Xem [bảng kiểm toán snapshot](../Tuan4/verification_snapshot/kiem_toan_snapshot.csv) và [báo cáo chạy thực tế](../Tuan4/verification_snapshot/BAO_CAO_CHAY_LAI_TUAN47.md). Các đồ thị và bảng của Tuần 3 giữ nguyên, không vẽ lại trong Tuần 4. Dữ liệu vẫn là **PRELABEL**, chưa được nghiệm thu.
