@@ -62,7 +62,7 @@ Tạo báo cáo và CSV ở `Tuan4/verification_snapshot/`, gồm `image_id` g�
 
 **Biểu đồ:** dùng nguyên ba hình Tuần 3 — [diện tích A](../Tuan3/do_thi_dien_tich_session_A.png), [diện tích B](../Tuan3/do_thi_dien_tich_session_B.png), [độ nhạy A/B](../Tuan3/do_thi_khao_sat_do_nhay_AB.png). Tuần 4 **không sinh PNG**.
 
-## Giới hạn cần trình bày khi nộp thầy
+## Giới hạn
 
 - Toàn bộ 200 ảnh ở snapshot kiểm chứng là `unreviewed_prelabel` (`student_prelabels_yolov8_manual_v1`), **chưa phải human_verified**.
 - Sai khác của các kịch bản lấy thưa/xóa mốc so với lưới gốc chỉ là **độ nhạy lấy mẫu**; lưới gốc không được mặc định là tích phân thật.
